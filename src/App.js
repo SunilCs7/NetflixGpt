@@ -1,7 +1,11 @@
 import "./App.css";
 
 function App() {
-  return <div className="App">NetflixGpt, get started</div>;
+  return (
+    <div className="text-3xl font-bold text-red-800">
+      NetflixGpt, get started
+    </div>
+  );
 }
 
 export default App;
