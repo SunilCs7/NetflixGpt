@@ -8,10 +8,15 @@ const Login = () => {
 
   const email = useRef(null);
   const password = useRef(null);
+  const name = useRef(null);
 
   const handleButtonClick = () => {
     // form validation
-    const massage = checkValidData(email.current.value, password.current.value);
+    const massage = checkValidData(
+      email.current.value,
+      password.current.value,
+      name.current.value
+    );
     setErrorMassage(massage);
   };
 
@@ -39,8 +44,9 @@ const Login = () => {
         </h1>
         {!isSignInForm && (
           <input
+            ref={name}
             type="text"
-            placeholder="Enter Email Address....."
+            placeholder="FullName....."
             className="my-4 p-4 w-full bg-gray-800 rounded-lg"
           />
         )}
